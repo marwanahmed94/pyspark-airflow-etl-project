@@ -1,0 +1,10 @@
+
+
+services:
+  retail-etl:
+    build: .
+    container_name: retail_etl_container
+    command: python scripts/transform.py
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
